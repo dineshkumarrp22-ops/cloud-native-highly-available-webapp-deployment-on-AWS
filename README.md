@@ -1,24 +1,24 @@
 # ☁️ Cloud-Native Highly Available Web Application on AWS
 
-A cloud-native project demonstrating how to deploy a highly available web application using **Amazon EC2** and **Amazon Elastic File System (EFS)**. The project uses shared storage to host a centralized Apache website that can be accessed from multiple EC2 instances.
+A cloud-native AWS project demonstrating how to deploy a highly available web application using **Amazon EC2** and **Amazon Elastic File System (EFS)**. Multiple web servers share the same website content through a centralized file system.
 
 ---
 
 ## 📖 Project Overview
 
-This project showcases the implementation of a shared storage architecture on AWS using **Amazon Elastic File System (EFS)**. Two EC2 instances are configured as Apache web servers and mounted to the same EFS file system, ensuring both servers serve identical website content.
+This project demonstrates a shared storage architecture using **Amazon EFS** and **Amazon EC2**. Two Apache web servers are connected to the same Amazon EFS file system, allowing both servers to serve identical website content from a single shared location.
 
 ---
 
 ## 🚀 Features
 
-- Deploy multiple Amazon EC2 instances
-- Configure Apache HTTP Server
-- Create and mount Amazon EFS
-- Shared website storage across servers
-- Secure networking using VPC and Security Groups
-- Linux-based server administration
-- Highly available web hosting architecture
+- Launch multiple Amazon EC2 instances
+- Configure Apache Web Server
+- Create and Mount Amazon EFS
+- Shared Website Storage
+- Linux Administration
+- Secure Networking using VPC & Security Groups
+- High Availability Architecture
 
 ---
 
@@ -29,13 +29,13 @@ This project showcases the implementation of a shared storage architecture on AW
 - Amazon VPC
 - Security Groups
 - Amazon Linux 2023
-- Apache HTTP Server (httpd)
+- Apache HTTP Server
 
 ---
 
 ## 🏗️ Architecture
 
-```
+```text
                      Internet
                          │
                   Public IP Address
@@ -59,12 +59,12 @@ This project showcases the implementation of a shared storage architecture on AW
 
 ## ⚙️ Implementation Steps
 
-### 1. Launch EC2 Instances
+### Step 1 – Launch EC2 Instances
 
-- Launch two Amazon Linux EC2 instances.
-- Configure Security Groups to allow SSH (22), HTTP (80), and NFS (2049).
+- Launch two Amazon Linux 2023 EC2 instances.
+- Configure Security Groups for SSH (22), HTTP (80), and NFS (2049).
 
-### 2. Install Apache
+### Step 2 – Install Apache
 
 ```bash
 sudo yum install httpd -y
@@ -72,67 +72,62 @@ sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
 
-### 3. Create Amazon EFS
-
-- Create an EFS file system.
-- Configure Mount Targets in the VPC.
-
-### 4. Install Amazon EFS Utilities
+### Step 3 – Install Amazon EFS Utilities
 
 ```bash
 sudo yum install amazon-efs-utils -y
 ```
 
-### 5. Mount EFS
+### Step 4 – Mount Amazon EFS
 
 ```bash
 sudo mount -t efs -o tls fs-xxxxxxxx:/ /var/www/html
 ```
 
-### 6. Create Website
+### Step 5 – Create Website
 
 ```bash
 cd /var/www/html
 sudo vi index.html
 ```
 
-### 7. Verify
+### Step 6 – Verify
 
-Open the Public IP address of either EC2 instance in your browser.
+Open the Public IP of either EC2 instance.
 
-Both servers display the same website because the content is stored in Amazon EFS.
-
----
-
-## 📷 Project Screenshots
-
-### Web Server 1
-
-![Web Server 1](server1-terminal.png)
+Both servers display the same webpage because they share the same Amazon EFS storage.
 
 ---
 
-### Web Server 2
+# 📷 Project Screenshots
 
-![Web Server 2](server2-terminal.png)
+## 🖥️ Web Server 1 Terminal
 
----
-
-### Website Output (Server 1)
-
-![Website Output 1](website-output1.png)
+<img src="server1-terminal.png" width="900">
 
 ---
 
-### Website Output (Server 2)
+## 🖥️ Web Server 2 Terminal
 
-![Website Output 2](website-output2.png)
+<img src="server2-terminal.png" width="900">
+
+---
+
+## 🌐 Website Output (Server 1)
+
+<img src="website-output1.png" width="900">
+
+---
+
+## 🌐 Website Output (Server 2)
+
+<img src="website-output2.png" width="900">
 
 ---
 
 ## 📂 Repository Structure
 
-```
+```text
 Cloud-Native-Highly-Available-Web-Application-on-AWS/
 │
 ├── README.md
@@ -147,14 +142,14 @@ Cloud-Native-Highly-Available-Web-Application-on-AWS/
 
 ## 💡 Skills Demonstrated
 
-- AWS Cloud Computing
+- AWS Cloud
 - Amazon EC2
 - Amazon EFS
-- Amazon VPC
 - Linux Administration
 - Apache HTTP Server
+- Amazon VPC
+- Security Groups
 - Shared Storage
-- Cloud Infrastructure
 - High Availability
 
 ---
@@ -164,8 +159,8 @@ Cloud-Native-Highly-Available-Web-Application-on-AWS/
 - Created and configured Amazon EFS.
 - Mounted EFS on multiple EC2 instances.
 - Hosted a centralized Apache website.
-- Verified shared storage functionality.
-- Improved Linux and AWS administration skills.
+- Verified shared storage across servers.
+- Strengthened AWS and Linux administration skills.
 
 ---
 
@@ -174,21 +169,19 @@ Cloud-Native-Highly-Available-Web-Application-on-AWS/
 - Application Load Balancer (ALB)
 - Auto Scaling Group
 - Amazon CloudWatch Monitoring
-- Route 53 DNS Integration
+- Route 53 DNS
 - HTTPS using AWS Certificate Manager
-- CI/CD Pipeline with Jenkins or GitHub Actions
+- CI/CD with Jenkins or GitHub Actions
 
 ---
 
 ## 👨‍💻 Author
 
-**Dineshkumar R**
+**Kishore G**
 
 **Aspiring AWS Cloud & DevOps Engineer**
 
-- https://github.com/dineshkumarrp22-ops
-- www.linkedin.com/in/dinesh-kumar-engr
-
----
+- GitHub: https://github.com/KISHORE-2605
+- LinkedIn: https://www.linkedin.com/in/kishore-g005
 
 ⭐ If you found this project useful, consider giving it a **Star** on GitHub.
