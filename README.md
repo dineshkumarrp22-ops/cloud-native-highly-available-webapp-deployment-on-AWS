@@ -177,11 +177,11 @@ Cloud-Native-Highly-Available-Web-Application-on-AWS/
 
 ## 👨‍💻 Author
 
-**Kishore G**
+**Dineshkumar R**
 
 **Aspiring AWS Cloud & DevOps Engineer**
 
-- GitHub: https://github.com/KISHORE-2605
-- LinkedIn: https://www.linkedin.com/in/kishore-g005
+- https://github.com/dineshkumarrp22-ops
+- www.linkedin.com/in/dinesh-kumar-engr
 
 ⭐ If you found this project useful, consider giving it a **Star** on GitHub.
